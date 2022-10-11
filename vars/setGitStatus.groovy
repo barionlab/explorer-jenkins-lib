@@ -1,4 +1,4 @@
-void setBuildStatus(Map config = [:]) {
+def setBuildStatus(Map config = [:]) {
   step([
       $class: "GitHubCommitStatusSetter",
       reposSource: [$class: "ManuallyEnteredRepositorySource", url: "${config.gitUrl}"],
