@@ -29,6 +29,8 @@ pipeline {
             //slackSend message: "Tests passed - ${JOB_NAME} #${BUILD_NUMBER} (<${BUILD_URL}|Open>)", color: "good"
             //setBuildStatus(gitUrl:"", context:"", message:"test message", state:"good")
             helloWorld()
+            getIssueIdFromCommitMessage()
+            getJiraTicket(env.GIT_COMMIT)
             addJiraLabel(label:"STAGE",issue:getJiraTicket(env.GIT_COMMIT),site:"explorer")
         }        
     }
