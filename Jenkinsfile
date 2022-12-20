@@ -30,8 +30,8 @@ pipeline {
             //setBuildStatus(gitUrl:"", context:"", message:"test message", state:"good")
             helloWorld()
             getIssueIdFromCommitMessage()
-            getJiraTicket(env.GIT_COMMIT)
-            addJiraLabel(label:"STAGE",issue:getJiraTicket(env.GIT_COMMIT),site:"explorer")
+            //getJiraTicket(env.GIT_COMMIT)
+            //addJiraLabel(label:"STAGE",issue:getJiraTicket(env.GIT_COMMIT),site:"explorer")
         }        
     }
     
