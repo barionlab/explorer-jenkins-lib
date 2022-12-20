@@ -33,6 +33,7 @@ pipeline {
             getIssueIdFromCommitMessage()
             //getJiraTicket(env.GIT_COMMIT)
             addJiraLabel(label:"UAT",issue:getIssueIdFromCommitMessage(),site:"explorer")
+            getJenkinsEnvironment()
         }        
     }
     
