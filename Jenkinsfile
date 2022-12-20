@@ -32,7 +32,7 @@ pipeline {
             helloWorld()
             getIssueIdFromCommitMessage()
             //getJiraTicket(env.GIT_COMMIT)
-            //addJiraLabel(label:"STAGE",issue:getJiraTicket(env.GIT_COMMIT),site:"explorer")
+            addJiraLabel(label:"STAGE",issue:getIssueIdFromCommitMessage(),site:"explorer")
         }        
     }
     
