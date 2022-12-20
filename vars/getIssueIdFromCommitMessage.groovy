@@ -4,6 +4,7 @@ def call(Map config=[:]) {
   def issueId = rawIssueId.replaceAll("[^a-zA-Z0-9-]+","")
   echo "issueId = ${issueId}"
   if( issueId ==~ /((?<!([A-Za-z]{1,10})-?)[A-Z]+-\d+)/ ) {
+    echo "return result"
     return issueId
   }
   return
