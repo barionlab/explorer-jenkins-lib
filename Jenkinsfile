@@ -17,12 +17,13 @@ pipeline {
             }
             steps {
                 helloWorld() 
-                sh 'echo ${GIT_COMMIT}'
-                sh 'exho ${GIT_PREVIOUS_COMMIT}'
                 sh 'echo ${JOB_NAME}'
                 sh 'echo ${JOB_BASE_NAME}'
                 sh 'echo ${BUILD_DISPLAY_NAME}'
                 sh 'echo env'
+                sh 'echo GIT_COMMIT ${GIT_COMMIT}'
+                sh 'exho GIT_PREVIOUS_COMMIT ${GIT_PREVIOUS_COMMIT}'
+                sh 'exho GIT_PREVIOUS_SUCCESSFUL_COMMIT ${GIT_PREVIOUS_SUCCESSFUL_COMMIT}'
                 
             }
         }
