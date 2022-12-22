@@ -38,5 +38,4 @@ pipeline {
             //addJiraLabel(label:getJenkinsEnvironment(),issue:getIssueIdFromCommitMessage(),site:"explorer")
         }        
     }
-    
 }
