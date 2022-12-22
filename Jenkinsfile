@@ -18,6 +18,7 @@ pipeline {
             steps {
                 helloWorld() 
                 sh 'echo ${GIT_COMMIT}'
+                sh 'exho ${GIT_PREVIOUS_COMMIT}'
                 sh 'echo ${JOB_NAME}'
                 sh 'echo ${JOB_BASE_NAME}'
                 sh 'echo ${BUILD_DISPLAY_NAME}'
@@ -30,9 +31,9 @@ pipeline {
             //slackSend message: "Tests passed - ${JOB_NAME} #${BUILD_NUMBER} (<${BUILD_URL}|Open>)", color: "good"
             //setBuildStatus(gitUrl:"", context:"", message:"test message", state:"good")
             helloWorld()
-            getIssueIdFromCommitMessage()
+            //getIssueIdFromCommitMessage()
             //getJiraTicket(env.GIT_COMMIT)
-            addJiraLabel(label:getJenkinsEnvironment(),issue:getIssueIdFromCommitMessage(),site:"explorer")
+            //addJiraLabel(label:getJenkinsEnvironment(),issue:getIssueIdFromCommitMessage(),site:"explorer")
         }        
     }
     
