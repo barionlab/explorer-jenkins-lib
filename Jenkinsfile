@@ -23,8 +23,7 @@ pipeline {
                 sh 'echo env'
                 sh 'echo GIT_COMMIT ${GIT_COMMIT}'
                 sh 'exho GIT_PREVIOUS_COMMIT ${GIT_PREVIOUS_COMMIT}'
-                sh 'exho GIT_PREVIOUS_SUCCESSFUL_COMMIT ${GIT_PREVIOUS_SUCCESSFUL_COMMIT}'
-                
+                sh 'exho GIT_PREVIOUS_SUCCESSFUL_COMMIT ${GIT_PREVIOUS_SUCCESSFUL_COMMIT}'       
             }
         }
     }
