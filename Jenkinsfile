@@ -23,6 +23,7 @@ pipeline {
                 sh 'echo ${JOB_BASE_NAME}'
                 sh 'echo ${BUILD_DISPLAY_NAME}'
                 sh 'echo env'
+                
             }
         }
     }
