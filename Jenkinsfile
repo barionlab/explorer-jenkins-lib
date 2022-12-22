@@ -35,8 +35,8 @@ pipeline {
             helloWorld()
             //getIssueIdFromCommitMessage()
             //getJiraTicket(env.GIT_COMMIT)
-            //addJiraLabel(label:getJenkinsEnvironment(),issue:getIssueIdFromCommitMessage(),site:"explorer")
-            getIssueIdFromCommitMessage()
+            addJiraLabel(label:getJenkinsEnvironment(),issue:getIssueIdFromCommitMessage(),site:"explorer")
+            //getIssueIdFromCommitMessage()
         }        
     }
 }
