@@ -24,7 +24,7 @@ pipeline {
                 sh 'echo GIT_COMMIT ${GIT_COMMIT}'
                 sh 'echo GIT_PREVIOUS_COMMIT ${GIT_PREVIOUS_COMMIT}'
                 sh 'echo GIT_PREVIOUS_SUCCESSFUL_COMMIT ${GIT_PREVIOUS_SUCCESSFUL_COMMIT}'
-                sh 'echo 123456'
+                sh 'echo 1234567'
             }
         }
     }
